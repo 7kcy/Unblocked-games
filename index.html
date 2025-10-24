@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cyclones Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Cyclones Hub</h1>
+      <p class="tag">Play • Learn • Compete</p>
+    </div>
+    <div class="controls">
+      <input id="search" placeholder="Search games..." aria-label="Search games">
+      <button id="addGameBtn" title="Add a game">Add Game</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="gamesGrid" class="grid" aria-live="polite">
+      <!-- Cards populated by scripts.js -->
+    </section>
+
+    <div id="embedArea" class="embed-area hidden" aria-hidden="true">
+      <div class="embed-top">
+        <button id="closeEmbed" aria-label="Close">✕</button>
+        <h3 id="embedTitle">Playing</h3>
+        <a id="openNewTab" target="_blank" rel="noopener" class="open-link">Open in new tab ↗</a>
+      </div>
+      <iframe id="embedFrame" sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock"></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <small>Made for learning & fun — include only games you have permission to host. Embeds may be blocked by some sites; use “Open in new tab” if that happens.</small>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
